@@ -71,21 +71,21 @@ BlazeComponent.extendComponent({
       // Close the inlined form when after its submission
       submit: function() {
         var self = this;
-        // XXX Swith to an arrow function here when we'll have ES6
+        // XXX Switch this to an arrow function when we have ES6
         if (this.currentData().autoclose !== false) {
           Tracker.afterFlush(function() {
             self.close();
             self.callFirstWith(self, 'resetCache');
           });
         }
-      }
+      } 
     }];
   }
 }).register('inlinedForm');
 
 // Press escape to close the currently opened inlinedForm
 EscapeActions.register('inlinedForm',
-  function() { currentlyOpenedForm.get().close(); },
+  function() { if (confirm('You may have unsaved data, discard your edits?')) currentlyOpenedForm.get().close(); },
   function() { return currentlyOpenedForm.get() !== null; }, {
     noClickEscapeOn: '.js-inlined-form'
   }

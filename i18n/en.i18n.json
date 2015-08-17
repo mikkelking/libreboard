@@ -191,5 +191,6 @@
     "changePasswordPopup-title": "Change Password",
     "cardDetailsActionsPopup-title": "Card Actions",
     "disambiguateMultiLabelPopup-title": "Disambiguate Label Action",
-    "disambiguateMultiMemberPopup-title": "Disambiguate Member Action"
+    "disambiguateMultiMemberPopup-title": "Disambiguate Member Action",
+    "unsaved": "You have not saved your data - proceed?"
 }
